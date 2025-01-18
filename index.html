@@ -8,15 +8,22 @@
     <title>lesson5</title>
   </head>
   <body>
-    <img
-      src="responsive-images/images/meal.jpg"
-      alt="bowl with salmon"
-      class="meal"
-      srcset="
-        responsive-images/images/meal.jpg    1x,
-        responsive-images/images/meal@2x.jpg 2x,
-        responsive-images/images/meal@3.jpg  3x
-      "
-    />
+    <picture>
+      <source
+        media="(max-width: 500px)"
+        srcset="
+          responsive-images/images/meal-cropped@1x.jpg 1x,
+          responsive-images/images/meal-cropped@2x.jpg 2x
+        "
+      />
+      <source
+        media="(min-width: 501px)"
+        srcset="
+          responsive-images/images/meal@1x.jpg 1x,
+          responsive-images/images/meal@2x.jpg 2x
+        "
+      />
+      <img src="responsive-images/images/meal.jpg" alt="bowl with salmon" />
+    </picture>
   </body>
 </html>
